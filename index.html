@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="🍬🍭AME&COLD ICE🍭🍬公式サイトへようこそ！Discordで一緒に盛り上がろう。">
+  <meta name="keywords" content="Discord, サーバー, コミュニティ, 🍬🍭AME&COLD ICE🍭🍬, 仲間募集, イベント">
+  <meta name="author" content="🍬🍭AME&COLD ICE🍭🍬公式">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="DALL·E 2025-02-15 17.21.55 - A colorful and cute ice cream illustration featuring a waffle cone with swirled pink ice cream, topped with chocolate drizzle, lollipops, candy bears,.png">
+  <title>🍬🍭AME&COLD ICE🍭🍬 - 公式サイト</title>
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>🍬🍭AME&COLD ICE🍭🍬</h1>
+      <p>一緒に盛り上がろう！楽しい雑談や特別イベントであなたも仲間入り。</p>
+      <a href="https://discord.gg/QcBKv8CrGT" class="cta-button">今すぐ参加</a>
+    </div>
+  </header>
+  <section class="about-section">
+    <h2 data-animate="fadeInUp">🍬🍭AME&COLD ICE🍭🍬とは？</h2>
+    <p data-animate="fadeInUp">🍬🍭AME&COLD ICE🍭🍬は、気軽に交流できるコミュニティとして作られたDiscordサーバーです。</p>
+    <p data-animate="fadeInUp">雑談だけでなく、ゲーム、イベント、特別な企画も盛りだくさん！</p>
+    <p data-animate="fadeInUp">興味がある方はぜひお気軽に参加してください。</p>
+  </section>
+  <section class="features-section">
+    <h2 data-animate="zoomIn">サーバーの特徴</h2>
+    <div class="features-container">
+      <div class="feature-item" data-animate="slideInLeft">
+        <div class="feature-icon">🎉</div>
+        <h3>チャンネル多数</h3>
+        <p>要望に答え、チャンネルを増やしていきます。</p>
+      </div>
+      <div class="feature-item" data-animate="zoomIn">
+        <div class="feature-icon">🛡️</div>
+        <h3>安心安全</h3>
+        <p>専用のBotで荒らしを対策し、安心して利用できる環境を提供。</p>
+      </div>
+      <div class="feature-item" data-animate="slideInRight">
+        <div class="feature-icon">🤝</div>
+        <h3>コミュニティ重視</h3>
+        <p>初心者からベテランまで誰でも歓迎！温かい仲間が待っています。</p>
+      </div>
+    </div>
+  </section>
+  <section class="updates-section">
+    <h2 data-animate="fadeInUp">最近のアップデート</h2>
+    <ul data-animate="fadeInUp">
+      <li>🎉 新しいイベントが追加されました！次回は週末に開催予定です。</li>
+      <li>🛡️ セキュリティが強化され、荒らし対策がさらに進化しました。</li>
+      <li>🤝 新しいチャットルーム「ゲーム好きの集い」がオープンしました！</li>
+    </ul>
+  </section>  
+  <footer>
+    <p>© 2025 🍬🍭AME&COLD ICE🍭🍬. All rights reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('[data-animate]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animate);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animateElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
 
