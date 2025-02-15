@@ -1,1 +1,186 @@
+/* ベーススタイルリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #080c1a, #161b33, #1c2541);
+    color: #E0E0E0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-align: center;
+    position: relative;
+    animation: backgroundMove 10s ease infinite;
+}
+
+/* 背景のキラキラエフェクト（アニメーション） */
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    opacity: 0.3;
+    pointer-events: none;
+    animation: sparkleAnimation 5s infinite alternate;
+}
+
+/* 背景の動き */
+@keyframes backgroundMove {
+    0% {
+        background: linear-gradient(135deg, #080c1a, #161b33, #1c2541);
+    }
+    50% {
+        background: linear-gradient(135deg, #1c2541, #161b33, #080c1a);
+    }
+    100% {
+        background: linear-gradient(135deg, #080c1a, #161b33, #1c2541);
+    }
+}
+
+/* キラキラアニメーション */
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 0.3;
+        background-position: 0 0;
+    }
+    50% {
+        opacity: 0.6;
+        background-position: 100% 100%;
+    }
+    100% {
+        opacity: 0.3;
+        background-position: 0 0;
+    }
+}
+
+/* ヒーローセクション */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #161b33, #1c2541 80%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #bb86fc, #03dac6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: subtleGlow 1.5s ease infinite alternate;
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.6), 0 0 20px rgba(3, 218, 198, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #03dac6, #bb86fc);
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(3, 218, 198, 0.5), 0 0 25px rgba(187, 134, 252, 0.5);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(3, 218, 198, 0.7), 0 0 30px rgba(187, 134, 252, 0.7);
+}
+
+/* 特徴セクション */
+.features-section {
+    padding: 6rem 2rem;
+    background: #121826;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-item {
+    background: linear-gradient(135deg, #272c40, #3a425e);
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 320px;
+    color: #E0E0E0;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(3, 218, 198, 0.4), 0 0 20px rgba(187, 134, 252, 0.4);
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(3, 218, 198, 0.6), 0 0 30px rgba(187, 134, 252, 0.6);
+}
+
+/* アップデートセクション */
+.updates-section {
+    padding: 4rem 2rem;
+    background: #1c2541;
+    color: #E0E0E0;
+}
+
+.updates-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #03dac6;
+}
+
+.updates-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.updates-section li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #272c40, #3a425e);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(3, 218, 198, 0.3), 0 0 20px rgba(187, 134, 252, 0.3);
+}
+
+/* フッター */
+footer {
+    padding: 2rem;
+    background: #080c1a;
+    text-align: center;
+    font-size: 1rem;
+    color: #E0E0E0;
+    border-top: 2px solid #03dac6;
+    box-shadow: 0 -3px 15px rgba(3, 218, 198, 0.3);
+}
+
+/* アニメーション */
+@keyframes subtleGlow {
+    from {
+        text-shadow: 0 0 8px #bb86fc, 0 0 15px #03dac6;
+    }
+    to {
+        text-shadow: 0 0 15px #03dac6, 0 0 25px #bb86fc;
+    }
+}
 
